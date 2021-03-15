@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var coordinator = NavCoordinator()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        CustomNavView(coordinator: coordinator)
     }
 }
 

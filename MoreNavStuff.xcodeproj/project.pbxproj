@@ -13,6 +13,9 @@
 		FAC16F2525FF3731004238EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC16F2425FF3731004238EC /* Preview Assets.xcassets */; };
 		FAC16F3025FF3731004238EC /* MoreNavStuffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC16F2F25FF3731004238EC /* MoreNavStuffTests.swift */; };
 		FAC16F3B25FF3731004238EC /* MoreNavStuffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC16F3A25FF3731004238EC /* MoreNavStuffUITests.swift */; };
+		FAC16F4C25FF3744004238EC /* NavCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC16F4B25FF3744004238EC /* NavCoordinator.swift */; };
+		FAC16F5425FF3836004238EC /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC16F5325FF3836004238EC /* CustomNavView.swift */; };
+		FAC16F5925FF3C52004238EC /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC16F5825FF3C51004238EC /* LazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		FAC16F3625FF3731004238EC /* MoreNavStuffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoreNavStuffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC16F3A25FF3731004238EC /* MoreNavStuffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreNavStuffUITests.swift; sourceTree = "<group>"; };
 		FAC16F3C25FF3731004238EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC16F4B25FF3744004238EC /* NavCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavCoordinator.swift; sourceTree = "<group>"; };
+		FAC16F5325FF3836004238EC /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		FAC16F5825FF3C51004238EC /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				FAC16F2125FF3731004238EC /* Assets.xcassets */,
 				FAC16F2625FF3731004238EC /* Info.plist */,
 				FAC16F2325FF3731004238EC /* Preview Content */,
+				FAC16F4B25FF3744004238EC /* NavCoordinator.swift */,
+				FAC16F5325FF3836004238EC /* CustomNavView.swift */,
+				FAC16F5825FF3C51004238EC /* LazyView.swift */,
 			);
 			path = MoreNavStuff;
 			sourceTree = "<group>";
@@ -260,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC16F2025FF372F004238EC /* ContentView.swift in Sources */,
+				FAC16F5425FF3836004238EC /* CustomNavView.swift in Sources */,
+				FAC16F4C25FF3744004238EC /* NavCoordinator.swift in Sources */,
+				FAC16F5925FF3C52004238EC /* LazyView.swift in Sources */,
 				FAC16F1E25FF372F004238EC /* MoreNavStuffApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
