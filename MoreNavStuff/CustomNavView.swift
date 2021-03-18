@@ -28,16 +28,70 @@ extension CustomNavView: View {
         NavigationView {
             VStack {
                 pageView(.page1)
-                links()
+                
             }
         }
         EmptyView()
     }
     
-    func pageView(_ route: NavRoute) -> some View {
-        VStack {
-            Text("Here is the page: \(route.rawValue)")
+    func pageView(_ route: NavRoute) -> AnyView {
+        switch route {
+        case .page1:
+            return AnyView(
+            VStack {
+                Text("Page1")
+                Button(action: {
+                    coordinator.push(.page2)
+                }, label: {
+                    Text("Page2")
+                })
+                NavigationLink(item: coordinator.routeBinding(.page2), destination: pageView)
+            }
+            )
+        case .page2:
+            return AnyView(
+            VStack {
+                Text("Page2")
+                Button(action: {
+                    coordinator.push(.page3)
+                }, label: {
+                    Text("Page3")
+                })
+                NavigationLink(item: coordinator.routeBinding(.page3), destination: pageView)
+            }
+            )
+        case .page3:
+            return AnyView(
+            VStack {
+                Text("Page3")
+                Button(action: {
+                    coordinator.push(.page4)
+                }, label: {
+                    Text("Page4")
+                })
+                NavigationLink(item: coordinator.routeBinding(.page4), destination: pageView)
+            }
+            )
+        case .page4:
+            return AnyView(
+            VStack {
+                Text("Page4")
+                Button(action: {
+                    coordinator.push(.page5)
+                }, label: {
+                    Text("Page5")
+                })
+                NavigationLink(item: coordinator.routeBinding(.page5), destination: pageView)
+            }
+            )
+        default:
+            return AnyView(
+            VStack {
+                Text("Here is the page: \(route.rawValue)")
+            }
+            )
         }
+        
     }
     
     func links() -> some View{

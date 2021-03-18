@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum NavRoute: String, Identifiable, CaseIterable {
     
@@ -32,14 +33,35 @@ final class NavCoordinator: ObservableObject {
     
     @Published var stack: [NavRoute] = [.page1]
     
-    func push() {
-        stack.append(stack.last!.next)
+    func push(_ route: NavRoute) {
+        stack.append(route)
+        print(stack)
     }
     
     func pop() {
         if stack.count > 1 {
             _ = stack.popLast()
         }
+    }
+    
+    func remove2() {
+        stack = stack.filter { $0.id != NavRoute.page2.id }
+        print(stack)
+    }
+    
+    func remove3() {
+        stack = stack.filter { $0.id != NavRoute.page3.id }
+    }
+    
+    func routeBinding(_ route: NavRoute) -> Binding<NavRoute?> {
+        return Binding<NavRoute?> { () -> NavRoute? in
+            return self.stack.first(where: {$0.id == route.id})
+        } set: { (x, _) in
+            if x == nil {
+                self.stack.removeAll(where: {$0.id == route.id })
+            }
+        }
+
     }
     
 }
